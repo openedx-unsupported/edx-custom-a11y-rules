@@ -14,7 +14,7 @@ describe("Custom ruleset", function(){
     beforeEach(function() {
         jasmine.getFixtures().fixturesPath = "/base/";
         rulesStr = readFixtures("lib/custom_a11y_rules.js");
-        rules = eval("output =" + rulesStr);
+        rules = eval(rulesStr); // jshint ignore:line
     });
 
     var findCheck = function(checkId){

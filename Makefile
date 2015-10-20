@@ -12,3 +12,6 @@ test: requirements
 
 test-dev: requirements
 	$(NODE_BIN)/karma start
+
+quality: requirements
+	$(NODE_BIN)/jshint lib/ test/
