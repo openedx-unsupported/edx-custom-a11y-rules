@@ -32,29 +32,51 @@ describe("Custom ruleset", function(){
         });
     };
 
-    describe("nav-aria-label-value", function(){
-        var checkId = "nav-aria-label-value",
-            selector = "nav";
-        it("should pass", function(){
-            loadFixtures("test/fixtures/nav-aria-label-pass.html");
-            evaluateCheck(checkId, selector, true);
+    describe("nav-aria-label", function(){
+        describe("nav-aria-label-value", function(){
+            var checkId = "nav-aria-label-value",
+                selector = "nav";
+            it("should pass", function(){
+                loadFixtures("test/fixtures/nav-aria-label-pass.html");
+                evaluateCheck(checkId, selector, true);
+            });
+            it("should fail", function(){
+                loadFixtures("test/fixtures/nav-aria-label-value-fail.html");
+                evaluateCheck(checkId, selector, false);
+            });
         });
-        it("should fail", function(){
-            loadFixtures("test/fixtures/nav-aria-label-value-fail.html");
-            evaluateCheck(checkId, selector, false);
+
+        describe("nav-aria-label-present", function(){
+            var checkId = "nav-aria-label-present",
+                selector = "nav";
+
+            it("should pass", function(){
+                loadFixtures("test/fixtures/nav-aria-label-pass.html");
+                evaluateCheck(checkId, selector, true);
+            });
+            it("should fail", function(){
+                loadFixtures("test/fixtures/nav-aria-label-present-fail.html");
+                evaluateCheck(checkId, selector, false);
+            });
         });
     });
-
-    describe("nav-aria-label-present", function(){
-        var checkId = "nav-aria-label-present",
-            selector = "nav";
-
+    describe("link-href", function(){
+        var checkId = "link-href",
+            selector = "a";
         it("should pass", function(){
-            loadFixtures("test/fixtures/nav-aria-label-pass.html");
+            loadFixtures("test/fixtures/link-href-pass.html");
             evaluateCheck(checkId, selector, true);
         });
-        it("should fail", function(){
-            loadFixtures("test/fixtures/nav-aria-label-present-fail.html");
+        it("should fail because the href value is '#'", function(){
+            loadFixtures("test/fixtures/link-href-value-fail.html");
+            evaluateCheck(checkId, selector, false);
+        });
+        it("should fail because the href value is ''", function(){
+            loadFixtures("test/fixtures/link-href-value-fail-2.html");
+            evaluateCheck(checkId, selector, false);
+        });
+        it("should fail because there is no href", function(){
+            loadFixtures("test/fixtures/link-href-present-fail.html");
             evaluateCheck(checkId, selector, false);
         });
     });
