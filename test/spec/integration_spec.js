@@ -1,9 +1,7 @@
 describe("Custom ruleset", function(){
-    rules = null;
+    var rules = customRules;
     beforeEach(function() {
         jasmine.getFixtures().fixturesPath = "/base/";
-        rulesStr = readFixtures("lib/custom_a11y_rules.js");
-        rules = eval(rulesStr); // jshint ignore:line
     });
     it("rules can be configured with axe-core", function(){
         axe._load({});
@@ -20,5 +18,11 @@ describe("Custom ruleset", function(){
         configuredCheckIds = Object.keys(configuredChecks);
         expectedCheckIds = [for (check of rules.checks) check.id]; // jshint ignore:line
         expect(configuredCheckIds).toEqual(expectedCheckIds);
+    });
+
+    it("does not contain unicode chars", function(){
+        rulesStr = JSON.stringify(rules);
+        rulesStrIsAscii = /^[\x00-\x7F]*$/.test(rulesStr);
+        expect(rulesStrIsAscii).toBeTruthy();
     });
 });

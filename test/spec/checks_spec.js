@@ -1,5 +1,5 @@
 describe("Custom ruleset", function(){
-    var rules = null;
+    var rules = customRules;
     var checkContext = {
         _relatedNodes: [],
         _data: null,
@@ -13,8 +13,6 @@ describe("Custom ruleset", function(){
 
     beforeEach(function() {
         jasmine.getFixtures().fixturesPath = "/base/";
-        rulesStr = readFixtures("lib/custom_a11y_rules.js");
-        rules = eval(rulesStr); // jshint ignore:line
     });
 
     var findCheck = function(checkId){

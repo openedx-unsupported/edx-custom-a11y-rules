@@ -19,7 +19,7 @@ module.exports = function(config) {
         {pattern: 'test/fixtures/*.html', watched: true, served: true, included: false},
 
         // lib
-        {pattern: 'lib/*.js', watched: true, served: true, included: false},
+        {pattern: 'lib/*.js', watched: true, served: true, included: true},
 
         // axe-core
         {pattern: 'node_modules/axe-core/axe.min.js', watched: false, served: true, included: true},
