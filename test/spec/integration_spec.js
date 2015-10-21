@@ -14,7 +14,7 @@ describe("Integration Spec", function(){
         axe.configure(rules);
         configuredChecks = axe._audit.checks;
         configuredCheckIds = Object.keys(configuredChecks);
-        for (check of rules.checks) {
+        for (check of rules.checks) { // jshint ignore:line
             expect(configuredCheckIds.indexOf(check.id)).toBeGreaterThan(-1);
         }
     });

@@ -9,11 +9,11 @@ describe("Rules Spec", function () {
                 failCount = context.expectedResult.failCount,
                 results;
             var verifyResults = function(){
-                failures = [for (r of results.violations) if (r.id === rule) r]
+                failures = [for (r of results.violations) if (r.id === rule) r] // jshint ignore:line
                 expect(failures.length).toEqual(failCount);
-                passes = [for (r of results.passes) if (r.id === rule) r]
+                passes = [for (r of results.passes) if (r.id === rule) r] // jshint ignore:line
                 expect(passes.length).toEqual(passCount);
-            }
+            };
             beforeEach(function (done) {
                 axe.configure(rules);
                 jasmine.getFixtures().fixturesPath = "/base/";
@@ -24,7 +24,7 @@ describe("Rules Spec", function () {
                 verifyResults();
             });
         });
-    };
+    }
 
     var fail = {
             result: "fail",
@@ -70,9 +70,9 @@ describe("Rules Spec", function () {
                 fixture: "nav-aria-label-pass.html",
                 expectedResult: pass
             }
-        ]
+        ];
 
-    for (context of specCases) {
+    for (context of specCases) { // jshint ignore:line
         runRuleSpec(context);
     }
 });

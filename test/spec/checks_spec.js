@@ -42,7 +42,7 @@ describe("Checks Spec", function(){
                 evaluateCheck();
             });
         });
-    };
+    }
 
     var specCases = [
         {
@@ -86,9 +86,9 @@ describe("Checks Spec", function(){
             fixture: "link-href-value-fail-2.html",
             result: false
         }
-    ]
+    ];
 
-    for (context of specCases) {
+    for (context of specCases) { // jshint ignore:line
         runCheckSpec(context);
     }
 });
