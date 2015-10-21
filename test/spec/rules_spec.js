@@ -49,6 +49,14 @@ describe("Rules Spec", function () {
         },
         specCases = [
             {
+                rule: "skip-link",
+                fixture: "skip-link-fail.html",
+                expectedResult: fail
+            }, {
+                rule: "skip-link",
+                fixture: "skip-link-pass.html",
+                expectedResult: pass
+            }, {
                 rule: "link-href",
                 fixture: "link-href-value-fail-1.html",
                 expectedResult: fail
