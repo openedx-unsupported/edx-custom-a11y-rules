@@ -65,6 +65,46 @@ describe("Checks Spec", function(){
             selector: "nav",
             fixture: "nav-aria-label-present-fail.html",
             result: false
+        }, {
+            checkId: "link-href",
+            selector: "a",
+            fixture: "link-href-pass.html",
+            result: true
+        }, {
+            checkId: "link-href",
+            selector: "a",
+            fixture: "link-href-present-fail.html",
+            result: false
+        }, {
+            checkId: "link-href",
+            selector: "a",
+            fixture: "link-href-value-fail-1.html",
+            result: false
+        },  {
+            checkId: "link-href",
+            selector: "a",
+            fixture: "link-href-value-fail-2.html",
+            result: false
+        },  {
+            checkId: "link-href-internal",
+            selector: "a",
+            fixture: "link-href-pass.html",
+            result: true
+        }, {
+            checkId: "link-href-internal",
+            selector: "a",
+            fixture: "link-href-present-fail.html",
+            result: true
+        }, {
+            checkId: "link-href-internal",
+            selector: "a",
+            fixture: "link-href-value-fail-3.html",
+            result: false
+        }, {
+            checkId: "link-href-internal",
+            selector: "a",
+            fixture: "link-href-value-fail-4.html",
+            result: false
         }
     ];
 

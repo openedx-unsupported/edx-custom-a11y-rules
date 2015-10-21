@@ -49,6 +49,26 @@ describe("Rules Spec", function () {
         },
         specCases = [
             {
+                rule: "link-href",
+                fixture: "link-href-value-fail-1.html",
+                expectedResult: fail
+            }, {
+                rule: "link-href",
+                fixture: "link-href-value-fail-2.html",
+                expectedResult: fail
+            },  {
+                rule: "link-href",
+                fixture: "link-href-value-fail-3.html",
+                expectedResult: fail
+            },  {
+                rule: "link-href",
+                fixture: "link-href-value-fail-4.html",
+                expectedResult: fail
+            }, {
+                rule: "link-href",
+                fixture: "link-href-pass.html",
+                expectedResult: pass
+            }, {
                 rule: "nav-aria-label",
                 fixture: "nav-aria-label-present-fail.html",
                 expectedResult: fail
