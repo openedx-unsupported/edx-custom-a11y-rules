@@ -1,4 +1,4 @@
-describe("Custom ruleset", function(){
+describe("Integration Spec", function(){
     var rules = customRules;
     beforeEach(function() {
         jasmine.getFixtures().fixturesPath = "/base/";
