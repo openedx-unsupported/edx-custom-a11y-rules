@@ -38,7 +38,7 @@ describe("Checks Spec", function(){
                 jasmine.getFixtures().fixturesPath = "/base/";
                 loadFixtures("test/fixtures/" + fixture);
             });
-            it(fixture + ", should return " + expectedResult, function () {
+            it(selector + " on " + fixture + ", should return " + expectedResult, function () {
                 evaluateCheck();
             });
         });
@@ -77,13 +77,13 @@ describe("Checks Spec", function(){
             result: false
         }, {
             checkId: "link-href",
-            selector: "a",
-            fixture: "link-href-value-fail-1.html",
+            selector: "a#pound-sign",
+            fixture: "link-href-value-fail.html",
             result: false
-        },  {
+        }, {
             checkId: "link-href",
-            selector: "a",
-            fixture: "link-href-value-fail-2.html",
+            selector: "a#empty-href",
+            fixture: "link-href-value-fail.html",
             result: false
         },  {
             checkId: "link-href-internal",
@@ -97,13 +97,53 @@ describe("Checks Spec", function(){
             result: true
         }, {
             checkId: "link-href-internal",
-            selector: "a",
-            fixture: "link-href-value-fail-3.html",
+            selector: "a#missing-target",
+            fixture: "link-href-value-fail.html",
             result: false
         }, {
             checkId: "link-href-internal",
-            selector: "a",
-            fixture: "link-href-value-fail-4.html",
+            selector: "a#unfocusable-target",
+            fixture: "link-href-value-fail.html",
+            result: false
+        }, {
+            checkId: "icon-aria-hidden",
+            selector: "i.fa",
+            fixture: "icon-aria-hidden-pass.html",
+            result: true
+        }, {
+            checkId: "icon-aria-hidden",
+            selector: "i.icon",
+            fixture: "icon-aria-hidden-pass.html",
+            result: true
+        }, {
+            checkId: "icon-aria-hidden",
+            selector: "span.fa",
+            fixture: "icon-aria-hidden-pass.html",
+            result: true
+        }, {
+            checkId: "icon-aria-hidden",
+            selector: "span.icon",
+            fixture: "icon-aria-hidden-pass.html",
+            result: true
+        },  {
+            checkId: "icon-aria-hidden",
+            selector: "i.fa",
+            fixture: "icon-aria-hidden-fail.html",
+            result: false
+        }, {
+            checkId: "icon-aria-hidden",
+            selector: "i.icon",
+            fixture: "icon-aria-hidden-fail.html",
+            result: false
+        }, {
+            checkId: "icon-aria-hidden",
+            selector: "span.fa",
+            fixture: "icon-aria-hidden-fail.html",
+            result: false
+        }, {
+            checkId: "icon-aria-hidden",
+            selector: "span.icon",
+            fixture: "icon-aria-hidden-fail.html",
             result: false
         }
     ];

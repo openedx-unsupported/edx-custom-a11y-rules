@@ -9,19 +9,23 @@ describe("Rules Spec", function () {
                 failCount = context.expectedResult.failCount,
                 results;
 
+            var sum = function(numsList){
+                return numsList.reduce(function(memo, i){return memo + i;});
+            };
+
             var verifyResults = function(){
-                var failures = [],
-                    passes = [];
+                var failures = [0],
+                    passes = [0];
 
                 results.violations.forEach(function (r) {
-                    if (r.id === rule) { failures.push(r); }
+                    if (r.id === rule) { failures.push(r.nodes.length); }
                 });
                 results.passes.forEach(function (r) {
-                    if (r.id === rule){ passes.push(r); }
+                    if (r.id === rule){ passes.push(r.nodes.length); }
                 });
 
-                expect(failures.length).toEqual(failCount);
-                expect(passes.length).toEqual(passCount);
+                expect(sum(failures)).toEqual(failCount);
+                expect(sum(passes)).toEqual(passCount);
             };
 
             beforeEach(function (done) {
@@ -37,57 +41,58 @@ describe("Rules Spec", function () {
         });
     }
 
-    var fail = {
-            result: "fail",
-            failCount: 1,
-            passCount: 0
+    var fail = function(fails){
+            return {
+                result: "fail",
+                failCount: fails || 1,
+                passCount: 0
+            };
         },
-        pass = {
-            result: "pass",
-            failCount: 0,
-            passCount: 1
-        },
-        specCases = [
+        pass = function(passes){
+            return {
+                result: "pass",
+                failCount: 0,
+                passCount: passes || 1
+            };
+        };
+
+    var specCases = [
             {
                 rule: "skip-link",
                 fixture: "skip-link-fail.html",
-                expectedResult: fail
+                expectedResult: fail()
             }, {
                 rule: "skip-link",
                 fixture: "skip-link-pass.html",
-                expectedResult: pass
+                expectedResult: pass()
             }, {
                 rule: "link-href",
-                fixture: "link-href-value-fail-1.html",
-                expectedResult: fail
-            }, {
-                rule: "link-href",
-                fixture: "link-href-value-fail-2.html",
-                expectedResult: fail
-            },  {
-                rule: "link-href",
-                fixture: "link-href-value-fail-3.html",
-                expectedResult: fail
-            },  {
-                rule: "link-href",
-                fixture: "link-href-value-fail-4.html",
-                expectedResult: fail
+                fixture: "link-href-value-fail.html",
+                expectedResult: fail(4)
             }, {
                 rule: "link-href",
                 fixture: "link-href-pass.html",
-                expectedResult: pass
+                expectedResult: pass()
             }, {
                 rule: "nav-aria-label",
                 fixture: "nav-aria-label-present-fail.html",
-                expectedResult: fail
+                expectedResult: fail()
             }, {
                 rule: "nav-aria-label",
                 fixture: "nav-aria-label-value-fail.html",
-                expectedResult: fail
+                expectedResult: fail(2)
             }, {
                 rule: "nav-aria-label",
                 fixture: "nav-aria-label-pass.html",
-                expectedResult: pass
+                expectedResult: pass()
+            }, {
+                rule: "icon-aria-hidden",
+                fixture: "icon-aria-hidden-pass.html",
+                expectedResult: pass(4)
+            }, {
+                rule: "icon-aria-hidden",
+                fixture: "icon-aria-hidden-fail.html",
+                expectedResult: fail(4)
             }
         ];
 
