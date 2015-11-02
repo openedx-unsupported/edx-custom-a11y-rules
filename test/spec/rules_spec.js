@@ -1,4 +1,4 @@
-describe("Rules Spec", function () {
+describe('Rules Spec', function () {
     function runRuleSpec (context) {
         describe(context.rule, function(){
             var rules = customRules,
@@ -30,12 +30,12 @@ describe("Rules Spec", function () {
 
             beforeEach(function (done) {
                 axe.configure(rules);
-                jasmine.getFixtures().fixturesPath = "/base/";
-                loadFixtures("test/fixtures/" + fixture);
+                jasmine.getFixtures().fixturesPath = '/base/';
+                loadFixtures('test/fixtures/' + fixture);
                 axe.a11yCheck(document, {}, function (r) { results = r; done(); });
             });
 
-            it(fixture + ", should " + expectedResult, function () {
+            it(fixture + ', should ' + expectedResult, function () {
                 verifyResults();
             });
         });
@@ -43,14 +43,14 @@ describe("Rules Spec", function () {
 
     var fail = function(fails){
             return {
-                result: "fail",
+                result: 'fail',
                 failCount: fails || 1,
                 passCount: 0
             };
         },
         pass = function(passes){
             return {
-                result: "pass",
+                result: 'pass',
                 failCount: 0,
                 passCount: passes || 1
             };
@@ -58,40 +58,40 @@ describe("Rules Spec", function () {
 
     var specCases = [
             {
-                rule: "skip-link",
-                fixture: "skip-link-fail.html",
+                rule: 'skip-link',
+                fixture: 'skip-link-fail.html',
                 expectedResult: fail()
             }, {
-                rule: "skip-link",
-                fixture: "skip-link-pass.html",
+                rule: 'skip-link',
+                fixture: 'skip-link-pass.html',
                 expectedResult: pass()
             }, {
-                rule: "link-href",
-                fixture: "link-href-value-fail.html",
+                rule: 'link-href',
+                fixture: 'link-href-value-fail.html',
                 expectedResult: fail(4)
             }, {
-                rule: "link-href",
-                fixture: "link-href-pass.html",
+                rule: 'link-href',
+                fixture: 'link-href-pass.html',
                 expectedResult: pass()
             }, {
-                rule: "nav-aria-label",
-                fixture: "nav-aria-label-present-fail.html",
+                rule: 'nav-aria-label',
+                fixture: 'nav-aria-label-present-fail.html',
                 expectedResult: fail()
             }, {
-                rule: "nav-aria-label",
-                fixture: "nav-aria-label-value-fail.html",
+                rule: 'nav-aria-label',
+                fixture: 'nav-aria-label-value-fail.html',
                 expectedResult: fail(2)
             }, {
-                rule: "nav-aria-label",
-                fixture: "nav-aria-label-pass.html",
+                rule: 'nav-aria-label',
+                fixture: 'nav-aria-label-pass.html',
                 expectedResult: pass()
             }, {
-                rule: "icon-aria-hidden",
-                fixture: "icon-aria-hidden-pass.html",
+                rule: 'icon-aria-hidden',
+                fixture: 'icon-aria-hidden-pass.html',
                 expectedResult: pass(4)
             }, {
-                rule: "icon-aria-hidden",
-                fixture: "icon-aria-hidden-fail.html",
+                rule: 'icon-aria-hidden',
+                fixture: 'icon-aria-hidden-fail.html',
                 expectedResult: fail(4)
             }
         ];

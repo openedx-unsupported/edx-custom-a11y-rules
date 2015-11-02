@@ -52,6 +52,13 @@ New Rules and Checks should be written in ``lib/custom_a11y_rules.js``.
 Testing guide
 =============
 
+There are Jasmine tests for checking that the custom rules
+behave as intended and that they can integrate with aXe Core.
+These can be run in "dev" mode, which keeps the browser up
+for debugging, or in "single-run" mode to run once and exit.
+See the `Testing checklist`_ below for more details about writing
+tests.
+
 To run tests for the custom ruleset in "dev" mode:
 
 .. code:: bash
@@ -64,6 +71,13 @@ To run tests for the custom ruleset in "single-run" mode:
 .. code:: bash
 
     make test
+
+
+Additionally, to check code quality with JSHint, use:
+
+.. code:: bash
+
+    make quality
 
 
 Testing checklist
