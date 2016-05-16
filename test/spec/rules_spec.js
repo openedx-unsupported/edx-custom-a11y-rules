@@ -54,6 +54,13 @@ describe('Rules Spec', function () {
                 failCount: 0,
                 passCount: passes || 1
             };
+        },
+        notRun =  function(){
+            return {
+                result: 'not run',
+                failCount: 0,
+                passCount: 0
+            };
         };
 
     var specCases = [
@@ -93,6 +100,14 @@ describe('Rules Spec', function () {
                 rule: 'icon-aria-hidden',
                 fixture: 'icon-aria-hidden-fail.html',
                 expectedResult: fail(4)
+            }, {
+                rule: 'description',
+                fixture: 'media.html',
+                expectedResult: notRun(),
+            }, {
+                rule: 'caption',
+                fixture: 'media.html',
+                expectedResult: notRun(),
             }
         ];
 
