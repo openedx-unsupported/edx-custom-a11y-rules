@@ -108,7 +108,15 @@ describe('Rules Spec', function () {
                 rule: 'caption',
                 fixture: 'media.html',
                 expectedResult: notRun(),
-            }
+            }, {
+                rule: 'section',
+                fixture: 'section-heading-first-fail.html',
+                expectedResult: fail()
+            }, {
+                rule: 'section',
+                fixture: 'section-heading-first-pass.html',
+                expectedResult: pass(6)
+            },
         ];
 
     specCases.forEach(function(context){ runRuleSpec(context); });

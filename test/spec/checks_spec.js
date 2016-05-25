@@ -83,7 +83,7 @@ describe('Checks Spec', function(){
             selector: 'a#empty-href',
             fixture: 'link-href-value-fail.html',
             result: false
-        },  {
+        }, {
             checkId: 'link-href-internal',
             selector: 'a',
             fixture: 'link-href-pass.html',
@@ -143,7 +143,17 @@ describe('Checks Spec', function(){
             selector: 'span.icon',
             fixture: 'icon-aria-hidden-fail.html',
             result: false
-        }
+        }, {
+            checkId: 'section-heading-first-child',
+            selector: 'section',
+            fixture: 'section-heading-first-fail.html',
+            result: false
+        }, {
+            checkId: 'section-heading-first-child',
+            selector: 'section',
+            fixture: 'section-heading-first-pass.html',
+            result: true
+        },
     ];
 
 
