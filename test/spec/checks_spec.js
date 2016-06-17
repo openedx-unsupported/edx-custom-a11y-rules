@@ -105,16 +105,6 @@ describe('Checks Spec', function(){
             result: false
         }, {
             checkId: 'icon-aria-hidden',
-            selector: 'i.fa',
-            fixture: 'icon-aria-hidden-pass.html',
-            result: true
-        }, {
-            checkId: 'icon-aria-hidden',
-            selector: 'i.icon',
-            fixture: 'icon-aria-hidden-pass.html',
-            result: true
-        }, {
-            checkId: 'icon-aria-hidden',
             selector: 'span.fa',
             fixture: 'icon-aria-hidden-pass.html',
             result: true
@@ -123,9 +113,9 @@ describe('Checks Spec', function(){
             selector: 'span.icon',
             fixture: 'icon-aria-hidden-pass.html',
             result: true
-        },  {
+        }, {
             checkId: 'icon-aria-hidden',
-            selector: 'i.fa',
+            selector: 'span.fa',
             fixture: 'icon-aria-hidden-fail.html',
             result: false
         }, {
@@ -135,7 +125,7 @@ describe('Checks Spec', function(){
             result: false
         }, {
             checkId: 'icon-aria-hidden',
-            selector: 'span.fa',
+            selector: 'i.fa',
             fixture: 'icon-aria-hidden-fail.html',
             result: false
         }, {
@@ -153,7 +143,27 @@ describe('Checks Spec', function(){
             selector: 'section',
             fixture: 'section-heading-first-pass.html',
             result: true
-        },
+        }, {
+            checkId: 'icon-correct-element',
+            selector: 'span.icon',
+            fixture: 'icon-correct-element-pass.html',
+            result: true
+        }, {
+            checkId: 'icon-correct-element',
+            selector: 'span.fa',
+            fixture: 'icon-correct-element-pass.html',
+            result: true
+        }, {
+            checkId: 'icon-correct-element',
+            selector: 'i.icon',
+            fixture: 'icon-correct-element-fail.html',
+            result: false
+        }, {
+            checkId: 'icon-correct-element',
+            selector: 'i.fa',
+            fixture: 'icon-correct-element-fail.html',
+            result: false
+        }
     ];
 
 

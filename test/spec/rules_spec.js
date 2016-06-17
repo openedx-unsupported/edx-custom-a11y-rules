@@ -99,7 +99,7 @@ describe('Rules Spec', function () {
             }, {
                 rule: 'icon-aria-hidden',
                 fixture: 'icon-aria-hidden-fail.html',
-                expectedResult: fail(4)
+                expectedResult: fail(2)
             }, {
                 rule: 'description',
                 fixture: 'media.html',
@@ -116,6 +116,14 @@ describe('Rules Spec', function () {
                 rule: 'section',
                 fixture: 'section-heading-first-pass.html',
                 expectedResult: pass(6)
+            }, {
+                rule: 'icon-element',
+                fixture: 'icon-correct-element-pass.html',
+                expectedResult: pass(2)
+            }, {
+                rule: 'icon-element',
+                fixture: 'icon-correct-element-fail.html',
+                expectedResult: fail(2)
             },
         ];
 
