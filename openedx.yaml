@@ -4,5 +4,5 @@
 nick: a11y
 oeps: {}
 openedx-release: {ref: master}
-owner: MUST FILL IN OWNER
+owner: edx/accessibility-team
 track-pulls: true
