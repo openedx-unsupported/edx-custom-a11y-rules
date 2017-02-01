@@ -111,11 +111,11 @@ describe('Rules Spec', function () {
             }, {
                 rule: 'section',
                 fixture: 'section-heading-first-fail.html',
-                expectedResult: fail()
+                expectedResult: fail(4)
             }, {
                 rule: 'section',
                 fixture: 'section-heading-first-pass.html',
-                expectedResult: pass(6)
+                expectedResult: pass(7)
             }, {
                 rule: 'icon-element',
                 fixture: 'icon-correct-element-pass.html',
