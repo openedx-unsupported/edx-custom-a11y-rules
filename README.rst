@@ -90,3 +90,12 @@ Testing checklist
 * If you are writing a Rule, add the test cases for your rule to ``specCases`` in ``test/spec/rule_spec.js``.
 
 * If needed, any new integration tests can go in ``test/spec/integration_spec.js``.
+
+
+Publishing a New Version
+========================
+
+When you have merged changes via a reviewed PR, update the version number in ``package.json``,
+and publish the new version to npm using ``npm publish``.
+
+If you need NPM permissions to publish a new version, send a request to ``front-end-dev@edx.org``.
