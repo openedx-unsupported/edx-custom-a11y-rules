@@ -124,6 +124,14 @@ describe('Rules Spec', function () {
                 rule: 'icon-element',
                 fixture: 'icon-correct-element-fail.html',
                 expectedResult: fail(2)
+            }, {
+                rule: 'valid-ids',
+                fixture: 'valid-ids-pass.html',
+                expectedResult: pass(1)
+            }, {
+                rule: 'valid-ids',
+                fixture: 'valid-ids-fail.html',
+                expectedResult: fail(10)
             },
         ];
 
