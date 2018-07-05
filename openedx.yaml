@@ -3,6 +3,5 @@
 
 nick: a11y
 oeps: {}
-openedx-release: {ref: master}
 owner: edx/edx-accessibility
 track-pulls: true
