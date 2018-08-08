@@ -78,6 +78,10 @@ describe('Rules Spec', function () {
                 expectedResult: fail(4)
             }, {
                 rule: 'link-href',
+                fixture: 'link-href-value-modal.html',
+                expectedResult: pass()
+            }, {
+                rule: 'link-href',
                 fixture: 'link-href-pass.html',
                 expectedResult: pass()
             }, {
