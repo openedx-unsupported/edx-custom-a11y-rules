@@ -1,6 +1,6 @@
 {
   "name": "edx-custom-a11y-rules",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Custom rules for accessibility testing with aXe Core",
   "main": "",
   "scripts": {
