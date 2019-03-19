@@ -32,7 +32,7 @@ describe('Rules Spec', function () {
                 axe.configure(rules);
                 jasmine.getFixtures().fixturesPath = '/base/';
                 loadFixtures('test/fixtures/' + fixture);
-                axe.a11yCheck(document, {}, function (r) { results = r; done(); });
+                axe.run(document, function (err, result) { results = result; done(); });
             });
 
             it(fixture + ', should ' + expectedResult, function () {
