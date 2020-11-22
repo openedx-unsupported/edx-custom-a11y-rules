@@ -1,5 +1,5 @@
-.. image:: https://travis-ci.org/edx/edx-custom-a11y-rules.svg?branch=master
-    :target: https://travis-ci.org/edx/edx-custom-a11y-rules
+.. image:: https://travis-ci.com/edx/edx-custom-a11y-rules.svg?branch=master
+    :target: https://travis-ci.com/edx/edx-custom-a11y-rules
 
 
 Overview
