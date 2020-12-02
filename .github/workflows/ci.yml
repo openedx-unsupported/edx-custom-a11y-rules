@@ -1,0 +1,37 @@
+name: Node CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  tests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-20.04]
+        node-version: ['0.10', '0.12']
+
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v2
+
+    - name: setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Setup Environment
+      run: |
+        npm install
+        export DISPLAY=:99.0
+        sudo apt-get install xvfb
+
+    - name: Run Tests
+      run: xvfb-run ./node_modules/.bin/karma start --single-run
+
+    - name: Run Quality
+      run: xvfb-run ./node_modules/.bin/jshint lib/ test/

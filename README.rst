@@ -1,6 +1,6 @@
-.. image:: https://travis-ci.org/edx/edx-custom-a11y-rules.svg?branch=master
-    :target: https://travis-ci.org/edx/edx-custom-a11y-rules
-
+.. image:: https://github.com/edx/edx-custom-a11y-rules/workflows/NodeCI/badge.svg?branch=master
+    :target: https://github.com/edx/edx-custom-a11y-rules/actions?query=workflow%3A%22Node+CI%22
+    :alt: GitHub CI
 
 Overview
 --------
