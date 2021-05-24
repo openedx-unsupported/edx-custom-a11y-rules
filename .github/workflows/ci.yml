@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-20.04]
-        node-version: ['0.10', '0.12', '14.17.0']
+        node-version: ['0.10', '0.12']
 
     steps:
     - name: checkout repo
@@ -31,7 +31,9 @@ jobs:
         sudo apt-get install xvfb
 
     - name: Run Tests
-      run: xvfb-run ./node_modules/.bin/karma start --single-run
+      run: |
+        node --version
+        xvfb-run ./node_modules/.bin/karma start --single-run
 
     - name: Run Quality
       run: xvfb-run ./node_modules/.bin/jshint lib/ test/
