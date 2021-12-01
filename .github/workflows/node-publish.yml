@@ -1,6 +1,8 @@
 name: Node.js Package Publishing
 
 on:
+  pull_request:
+    branches: '**'
   release:
     types: [published]
 
@@ -21,7 +23,7 @@ jobs:
       run: npm install
 
     - name: Build package
-      run: npm run build
+      run: npm run test
 
     - name: Publish Package
       env:
