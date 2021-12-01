@@ -70,7 +70,7 @@ describe('Checks Spec', function(){
             result: true
         }, {
             checkId: 'link-href',
-            selector: 'a',
+            selector: 'a.missing-href',
             fixture: 'link-href-present-fail.html',
             result: false
         }, {

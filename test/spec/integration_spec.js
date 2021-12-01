@@ -8,8 +8,8 @@ describe('Integration Spec', function(){
     it('rules can be configured with axe-core', function(){
         axe.configure(rules);
         var configuredRules = axe.getRules(['edx-custom']),
-            configuredRuleIds = [for (rule of configuredRules) rule.ruleId].sort(), // jshint ignore:line
-            expectedRuleIds = [for (rule of rules.rules) rule.id].sort(); // jshint ignore:line
+            configuredRuleIds = configuredRules.map(function(rule) { return rule.ruleId; }).sort(),
+            expectedRuleIds = rules.rules.map(function(rule) { return rule.id; }).sort();
         expect(configuredRuleIds).toEqual(expectedRuleIds);
     });
 

@@ -55,6 +55,13 @@ describe('Rules Spec', function () {
                 passCount: passes || 1
             };
         },
+        mixed = function(passes, fails){
+            return {
+                result: 'mixed',
+                failCount: fails,
+                passCount: passes
+            };
+        },
         notRun =  function(){
             return {
                 result: 'not run',
@@ -75,15 +82,15 @@ describe('Rules Spec', function () {
             }, {
                 rule: 'link-href',
                 fixture: 'link-href-value-fail.html',
-                expectedResult: fail(4)
+                expectedResult: mixed(1, 4)
             }, {
                 rule: 'link-href',
                 fixture: 'link-href-value-modal.html',
-                expectedResult: pass()
+                expectedResult: pass(2)
             }, {
                 rule: 'link-href',
                 fixture: 'link-href-pass.html',
-                expectedResult: pass()
+                expectedResult: pass(2)
             }, {
                 rule: 'nav-aria-label',
                 fixture: 'nav-aria-label-present-fail.html',
