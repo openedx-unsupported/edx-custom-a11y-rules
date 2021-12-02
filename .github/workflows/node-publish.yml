@@ -21,6 +21,12 @@ jobs:
 
     - name: Install Dependencies
       run: npm install
+      
+    - name: Setup Environment
+      run: |
+        npm install
+        export DISPLAY=:99.0
+        sudo apt-get install xvfb
 
     - name: Build package
       run: npm run test
