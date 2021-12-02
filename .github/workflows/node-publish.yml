@@ -1,6 +1,9 @@
 name: Node.js Package Publishing
 
 on:
+  pull_request:
+    branches: 
+      - '**'
   release:
     types: [published]
 
@@ -20,11 +23,8 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Build package
-      run: npm run build
-
     - name: Publish Package
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.SEMANTIC_RELEASE_NPM_TOKEN }}
-      run: npm run semantic-release
+      run: npm publish
