@@ -4,8 +4,7 @@
   "description": "Custom rules for accessibility testing with aXe Core",
   "main": "",
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start",
-    "semantic-release": "semantic-release"
+    "test": "./node_modules/karma/bin/karma start"
   },
   "repository": {
     "type": "git",
@@ -35,7 +34,6 @@
     "karma-jasmine-jquery": "^0.1.1",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-spec-reporter": "0.0.32",
-    "phantomjs": "^2.1.7",
-    "semantic-release": "^18.0.1"
+    "phantomjs": "^2.1.7"
   }
 }
