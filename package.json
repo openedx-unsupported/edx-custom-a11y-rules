@@ -1,10 +1,11 @@
 {
   "name": "edx-custom-a11y-rules",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Custom rules for accessibility testing with aXe Core",
   "main": "",
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start"
+    "test": "./node_modules/karma/bin/karma start",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
@@ -31,9 +32,10 @@
     "karma-firefox-launcher": "^2.1.2",
     "karma-jasmine": "^4.0.1",
     "karma-jasmine-html-reporter": "^1.7.0",
-    "karma-jasmine-jquery": "^0.1.1",
+    "karma-jasmine-jquery-2": "^0.1.1",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-spec-reporter": "0.0.32",
-    "phantomjs": "^2.1.7"
+    "phantomjs": "^2.1.7",
+    "semantic-release": "^18.0.1"
   }
 }
