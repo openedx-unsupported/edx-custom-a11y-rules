@@ -1,5 +1,5 @@
-.. image:: https://github.com/edx/edx-custom-a11y-rules/workflows/NodeCI/badge.svg?branch=master
-    :target: https://github.com/edx/edx-custom-a11y-rules/actions?query=workflow%3A%22Node+CI%22
+.. image:: https://github.com/openedx/edx-custom-a11y-rules/workflows/NodeCI/badge.svg?branch=master
+    :target: https://github.com/openedx/edx-custom-a11y-rules/actions?query=workflow%3A%22Node+CI%22
     :alt: GitHub CI
 
 Overview
@@ -34,7 +34,7 @@ Make sure npm is installed, then:
 
 .. code:: bash
 
-    git clone https://github.com/edx/edx-custom-a11y-rules.git
+    git clone https://github.com/openedx/edx-custom-a11y-rules.git
     cd edx-custom-a11y-rules
     make develop
 
