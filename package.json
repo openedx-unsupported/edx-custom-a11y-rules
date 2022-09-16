@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edx/edx-custom-a11y-rules.git"
+    "url": "git+https://github.com/openedx/edx-custom-a11y-rules.git"
   },
   "keywords": [
     "Accessibility",
@@ -20,9 +20,9 @@
   "author": "edX Accessibility Team",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/edx/edx-custom-a11y-rules/issues"
+    "url": "https://github.com/openedx/edx-custom-a11y-rules/issues"
   },
-  "homepage": "https://github.com/edx/edx-custom-a11y-rules#readme",
+  "homepage": "https://github.com/openedx/edx-custom-a11y-rules#readme",
   "devDependencies": {
     "axe-core": "^3.2.4",
     "jasmine-core": "^3.10.1",
