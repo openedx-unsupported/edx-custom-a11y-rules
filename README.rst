@@ -1,3 +1,6 @@
+.. warning:: This plugin to bokchoy is no longer being maintained.  See https://github.com/openedx/public-engineering/issues/13 for more details.
+
+
 .. image:: https://github.com/openedx/edx-custom-a11y-rules/workflows/NodeCI/badge.svg?branch=master
     :target: https://github.com/openedx/edx-custom-a11y-rules/actions?query=workflow%3A%22Node+CI%22
     :alt: GitHub CI
